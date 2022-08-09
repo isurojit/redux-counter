@@ -7,6 +7,11 @@ const reducerFun = (state = { counter: 0, msg: "" }, action) => {
       counter: state.counter + 1,
     };
   }
+  if (action.type === "increase") {
+    return {
+      counter: state.counter + action.amount,
+    };
+  }
   if (action.type === "decrement") {
     return {
       counter: state.counter - 1,
